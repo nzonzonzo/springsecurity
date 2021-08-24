@@ -27,6 +27,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
+        System.out.println("userdetails方法执行啦");
+
         com.nzo.entry.User user = userDao.findUser(username);
         if (user == null) {
             throw new UsernameNotFoundException("用户名没有找到");

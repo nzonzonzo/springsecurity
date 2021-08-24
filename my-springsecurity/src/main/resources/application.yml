@@ -6,5 +6,9 @@ spring:
     url: jdbc:mysql://localhost:3306/my-spring-security?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
     username: root
     password: 1234
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html
 mybatis:
   type-aliases-package: com.nzo.entry

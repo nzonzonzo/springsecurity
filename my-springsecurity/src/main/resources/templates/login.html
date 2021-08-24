@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/vuejs-2.5.16.js"></script>
+    <script src="../static/js/axios-0.18.0.js"></script>
+
+</head>
+<body>
+<div id="app">
+<form method="post" action="/login">
+    账户:<input type="text" name="username" v-model="username">
+    密码:<input type="password" name="password" v-model="password">
+    <div>
+    <input type="submit" name="提交" @click="login()">
+    </div>
+</form>
+</div>
+
+<script>
+    var vue = new Vue({
+        el: "#app",
+        data:{
+            username:'',
+            password:''
+        },
+        methods:{
+            login(){
+                axios.post("/user/login?username="+this.username+"&password="+this.password).then(response=>{
+                    console.log(response.data)
+                })
+            },
+        }
+
+    });
+</script>
+</body>
+</html>

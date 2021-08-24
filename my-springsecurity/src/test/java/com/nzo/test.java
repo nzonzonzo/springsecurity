@@ -21,7 +21,7 @@ public class test {
 
     @Test
     public void password(){
-        System.out.println(passwordEncoder.encode("123"));
+        System.out.println(passwordEncoder.encode("456"));
     }
 
     @Test
