@@ -12,6 +12,5 @@ public class LoginRedirect {
     public String denglu(){
         System.out.println("Denglu方法执行了");
         return "login";
-        System.out.println("已经return");
     }
 }
